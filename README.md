@@ -28,19 +28,7 @@ td=$((${2:-X}-1));  # TDX by default, replace with [1, 2, 3, 4]
 
 ## Output preview
 
-```bash
- 📆 EDT du 2021-04-08 — TD1 INFO
-
-08h00 — 09h20
-IN603 - CRYPTOGRAPHIE
-| CM
-| MOODLE
-
-14h30 — 17h20
-IN608 - Projet Informatique
-| TD
-| RC14 - BUFFON
-```
+![Terminal output for `bash edt.sh`](https://github.com/vdElyn/CLI-Daily-Calendar/blob/main/preview.png?raw=true)
 
 ## Script details
 
@@ -73,7 +61,3 @@ mod=`echo ${splitted[2]}`; mod=`echo ${mod} | cut -c 3-$((${#mod}-11))`
 echo -e "\n\033[33;01m 📆 EDT du ${day} — TD${2:-1}\033[0m\n"
 echo -e "\033[2m$deb — $end\033[0m\n\033[37;1m${mod}\033[0m\n| ${splitted[0]}\n| ${splitted[1]}\n"
 ```
-
-
-
-
